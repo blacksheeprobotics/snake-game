@@ -23,3 +23,15 @@ class Snake(object):
             new_y = self.snake_segments[seg_num - 1].ycor()
             self.snake_segments[seg_num].goto(new_x, new_y)
         self.snake_segments[0].forward(MOVE_DISTANCE)
+
+    def up(self):
+        self.snake_segments[0].setheading(90)
+
+    def down(self):
+        self.snake_segments[0].setheading(270)
+
+    def right(self):
+        self.snake_segments[0].setheading(0)
+
+    def left(self):
+        self.snake_segments[0].setheading(180)
