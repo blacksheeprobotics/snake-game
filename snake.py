@@ -12,6 +12,7 @@ class Snake(object):
     def __init__(self):
         self.snake_segments = []
         self.create_snake()
+        self.head = self.snake_segments[0]
 
     def create_snake(self):
         for position in STARTING_POSITIONS:
@@ -26,28 +27,20 @@ class Snake(object):
             new_x = self.snake_segments[seg_num - 1].xcor()
             new_y = self.snake_segments[seg_num - 1].ycor()
             self.snake_segments[seg_num].goto(new_x, new_y)
-        self.snake_segments[0].forward(MOVE_DISTANCE)
+        self.head.forward(MOVE_DISTANCE)
 
     def up(self):
-        if self.snake_segments[0].heading() == DOWN:
-            pass
-        else:
-            self.snake_segments[0].setheading(UP)
+        if self.head.heading() != DOWN:
+            self.head.setheading(UP)
 
     def down(self):
-        if self.snake_segments[0].heading() == UP:
-            pass
-        else:
-            self.snake_segments[0].setheading(DOWN)
+        if self.head.heading() != UP:
+            self.head.setheading(DOWN)
 
     def right(self):
-        if self.snake_segments[0].heading() == LEFT:
-            pass
-        else:
-            self.snake_segments[0].setheading(RIGHT)
+        if self.head.heading() != LEFT:
+            self.head.setheading(RIGHT)
 
     def left(self):
-        if self.snake_segments[0].heading() == RIGHT:
-            pass
-        else:
-            self.snake_segments[0].setheading(LEFT)
+        if self.head.heading() != RIGHT:
+            self.head.setheading(LEFT)
