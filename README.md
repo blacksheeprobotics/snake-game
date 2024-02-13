@@ -4,3 +4,4 @@
 1.0.2 : added snake logic for keystroke movements
 1.0.3 : added food class
 1.0.4 : added scoreboard class
+1.0.6 : added wall collision detection
