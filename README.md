@@ -7,3 +7,4 @@
 1.0.6 : added wall collision detection
 1.0.7 : added tail extension
 1.0.8 : added tail detection collisions
+1.0.9 : added slice to skip snake.head iteration
